@@ -8,7 +8,7 @@ This project recreates the GoStudent order page UI using modern front-end techno
 
 ## ✨ Features
 
-### 🎨 Modern Front-End Implementation
+### 🎨 Front-End Implementation
 - **React 19** with functional components and hooks
 - **Tailwind CSS 4** for responsive, utility-first styling
 - **Vite** for fast development and optimized builds
