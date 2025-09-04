@@ -134,10 +134,6 @@ The form uses **React Hook Form** with **Yup** schema validation for robust clie
 
 - **Code splitting** with Vite
 
-## 📝 Development Notes
-
-
-
 ### Styling Approach
 - **Tailwind CSS** for utility-first styling
 - **Custom CSS** for specific design requirements

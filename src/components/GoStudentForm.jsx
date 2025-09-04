@@ -50,7 +50,7 @@ const defaultValues = {
   postalCode: '',
   city: '',
   country: '',
-  monthlySessions: '',
+  monthlySessions: '6',
   paymentMethod: '',
   cardNumber: '',
   cardExpiry: '',
