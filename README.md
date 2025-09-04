@@ -4,7 +4,7 @@ A modern, responsive registration and booking interface for GoStudent's online t
 
 ## 🎯 Project Overview
 
-This project recreates the GoStudent order page UI using modern front-end technologies. It's designed to be WordPress-compatible and includes all the interactive elements from the original design.
+This project recreates the GoStudent order page UI using modern front-end technologies. It's designed to be **WordPress-compatible** and includes all the interactive elements from the original design. The form can be easily integrated into WordPress themes or plugins.
 
 ## ✨ Features
 
@@ -30,7 +30,6 @@ This project recreates the GoStudent order page UI using modern front-end techno
 
 ### 🌍 Internationalization Ready
 - Country code selection with flags
-- RTL layout support structure
 - Multi-language ready architecture
 
 ### 🔒 Form Features
@@ -79,40 +78,25 @@ The built files will be in the `dist` directory, ready for deployment.
 
 ```
 src/
-├── App.jsx          # Main application component
-├── App.css          # Custom styles and responsive design
-├── main.jsx         # Application entry point
-└── index.css        # Global styles and Tailwind imports
+├── App.jsx                    # Main application component
+├── App.css                    # Custom styles and responsive design
+├── main.jsx                   # Application entry point
+├── index.css                  # Global styles and Tailwind imports
+├── components/                # React components
+│   └── GoStudentForm.jsx     # Main registration form
+├── common/                    # Reusable UI components
+│   ├── InputField.jsx         # Form input components
+│   └── ToggleSwitch.jsx       # Toggle switch component
+├── hooks/                     # Custom React hooks
+│   └── useSubmitRegistration.js # Form submission logic
+└── validation/                # Form validation schemas
+    └── registrationSchema.js  # Yup validation schema
 ```
 
-## 🎨 Design Features
-
-### Layout
-- **Two-column layout** on desktop (form + order overview)
-- **Single-column layout** on mobile devices
-- **Card-based design** with shadows and rounded corners
-- **Clean typography** with proper hierarchy
-
-### Color Scheme
-- Primary: Blue (#3b82f6)
-- Secondary: Gray tones for text and backgrounds
-- Success: Green for discounts and satisfaction rate
-- Error: Red for validation states
-
-### Interactive Elements
-- **Hover effects** on buttons and form elements
-- **Focus states** with blue ring indicators
-- **Smooth transitions** for all interactive elements
-- **Disabled states** for form validation
 
 ## 🔧 WordPress Integration
 
 This project is designed to be easily integrated into WordPress:
-
-### As a WordPress Theme Component
-1. Copy the built files to your WordPress theme directory
-2. Include the CSS and JS files in your theme's `functions.php`
-3. Use the component in your WordPress templates
 
 ### As a WordPress Plugin
 1. Create a plugin structure
@@ -125,20 +109,18 @@ The form is structured to easily integrate with WordPress REST API:
 - Pricing calculations can be handled server-side
 - User data can be stored in WordPress database
 
-## 📱 Responsive Breakpoints
-
-- **Mobile**: < 768px (single column)
-- **Tablet**: 768px - 1024px (adjusted grid)
-- **Desktop**: > 1024px (two-column layout)
 
 ## 🔒 Form Validation
 
-The form includes client-side validation for:
-- Required fields
-- Email format validation
+The form uses **React Hook Form** with **Yup** schema validation for robust client-side validation:
+
+- Required fields validation
+- Email format validation  
 - Phone number formatting
 - Credit card number validation (basic)
 - Terms acceptance requirement
+- Real-time validation feedback
+- Custom validation rules with Yup schemas
 
 ## 🎯 Browser Support
 
@@ -151,17 +133,10 @@ The form includes client-side validation for:
 ## 🚀 Performance Optimizations
 
 - **Code splitting** with Vite
-- **Tree shaking** for unused CSS
-- **Optimized images** and assets
-- **Minified production builds**
-- **Lazy loading** ready structure
 
 ## 📝 Development Notes
 
-### State Management
-- Uses React hooks for local state management
-- Form data is managed with `useState`
-- Pricing calculations are reactive to user selections
+
 
 ### Styling Approach
 - **Tailwind CSS** for utility-first styling
@@ -173,27 +148,6 @@ The form includes client-side validation for:
 - **Clean, commented code** for maintainability
 - **Modular component structure**
 
-## 🔄 Future Enhancements
-
-- [ ] Server-side form validation
-- [ ] Payment gateway integration
-- [ ] Multi-language support
-- [ ] Advanced form validation
-- [ ] Analytics integration
-- [ ] A/B testing capabilities
-
-## 📄 License
-
-This project is created for educational and demonstration purposes.
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
-
 ---
 
-**Built with ❤️ using React, Vite, and Tailwind CSS**
+**Built with ❤️ using React, Vite, and Tailwind CSS and comptibale for wordpress**
